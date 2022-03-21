@@ -19,7 +19,7 @@ import { Airport } from '../models/airport';
 
     getFlightStatus(origin: string, destination:string,date:string): Observable<any> {
           return this.httpService.get<any>(`${AppConstant.get_flightStatus_Api}departureDate=${date}&origin=${origin}&destination=${destination}`
-          ,{ withCredentials: true });    
+          );    
       }
 
 }
