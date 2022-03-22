@@ -13,7 +13,7 @@ export class SearchBarComponent implements OnInit, OnChanges {
 
   public defaultInput_code : string;
   public defaultInput_city : string;
-
+  public title: string;
 
   constructor() {
     
@@ -22,6 +22,7 @@ export class SearchBarComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.defaultInput_code = this.placeholder=="Leaving from" ? "DXB" : "LHR";
     this.defaultInput_city = this.placeholder=="Leaving from" ? "Dubai" : "London";
+    this.title = this.placeholder == "Leaving from" ? "Leaving from" : "Going to";
   }
   ngOnChanges(): void {
     this.defaultInput_code = this.placeholder=="Leaving from" ? "DXB" : "LHR";

@@ -9,25 +9,28 @@
 
 
 
-This application helps to search the flights
+This application helps to search the flights <br />
 
-Features provided are,
-Can select origin and destination and search.
-It will show all the available flights and status as per the API response.
-Show the loading indicator while searching.
-Created reusable components.
-Added validations.
-Show the messages in case of any failure.
-Created unit tests using Karma.
+Features provided are, <br />
+Can select origin and destination and search.<br />
+It will show all the available flights and status as per the API response.<br />
+Show the loading indicator while searching.<br />
+Created reusable components.<br />
+Added validations.<br />
+Show the messages in case of any failure.<br />
+Created unit tests using Karma.<br />
 
-Application is hosted in github and running as https://praveennair28.github.io/search-flights/ 
+Application is hosted in github and running as https://praveennair28.github.io/search-flights/ <br />
 
-But there is a CORS issue with flight-status? endpoint due to which search functionality is not working in the above deployed site. I have fixed this locally by adding a proxy config, but the proxy config fix is not solving the CORS issue in the github deployed site.
+But there is a CORS issue with /flight-status endpoint due to which search functionality is not working in the above deployed site. I have fixed this locally by adding a proxy config, but the proxy config fix is not solving the CORS issue in the github deployed site.
 
-Please note the below points:
-If you are downloading the code, please checkout from the master branch only.
-When running in local, please do run as http://localhost:4200/  (Service urls are hardcoded as localhost to fix the CORS issue with the provided  flight-status? endpoint)
-When https://praveennair28.github.io/search-flights/  is opened, you can see that the application name is repeated in the Url. This happened due to some deployment error and due to this reloading the page will not work. If re-loading, then remove the repeated application name from url as below
+Please note the below points:<br />
+If you are downloading the code, please checkout from the master branch only.<br />
+When running in local, please do run as http://localhost:4200/  (Service urls are hardcoded as localhost to fix the CORS issue with the provided  /flight-status endpoint)<br />
+When https://praveennair28.github.io/search-flights/  is opened, you can see that the application name is repeated in the Url. This happened due to some deployment error and due to this reloading the page will not work. If re-loading, then remove the repeated application name from url as below<br />
+When data not available for the departure/arrival time it is displayed as '---" <br />
+When data not available for the departure/arrival date it is displayed as 'NA" <br />
+
 
 
 
