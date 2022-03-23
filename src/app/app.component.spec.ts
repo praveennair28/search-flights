@@ -42,8 +42,21 @@ describe('AppComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
+    component.airportList = ['Dubai','London'];
+    component.airports = ['Dubai','London'];
+    component.flightList = ['flight1','flight22'];
+    component.leavingFrom_placeholder = "Leaving from";
+    component.goingTo_placeholder ="Going to";;
+    component.showFlightList = false;
+    component.showloadingIndicator = false;
+    component.showValidationMsg = false;
+    component.validationMsg = "Invalid";
+    component.searchDate = "2022-03-03";
+    component.leavingFrom = "DXB";
+    component.leavingCityName = "Dubai";
+    component.goingTo = "LHR";
+    component.goingToCityName = "London";
     component.airportList = ['1','2'];
-
     fixture.detectChanges();
   });
 
@@ -93,5 +106,26 @@ describe('AppComponent', () => {
     component.validationMsg = '';
     component.validate();  
   }));
+
+  it('setGoingTo() called and value assigned', () =>{
+    var goingTO = "Going to";
+    component.setGoingTo(goingTO);
+
+    expect(component.goingTo).toEqual(goingTO);
+  })
+
+  it('setLeavingFrom() called and value assigned', () =>{
+    var leavingFrom = "Leaving from";
+    component.setLeavingFrom(leavingFrom);
+
+    expect(component.leavingFrom).toEqual(leavingFrom);
+  })
+
+  it('setDate() called and value assigned', () =>{
+    var searchDate = "2022-03-10";
+    component.setDate(searchDate);
+
+    expect(component.searchDate).toEqual(searchDate);
+  })
 
 });
